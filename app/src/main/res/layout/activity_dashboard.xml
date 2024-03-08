@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EBECE8"
+    tools:context=".dashboard">
+
+    <LinearLayout
+
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:orientation="horizontal"
+        android:background="@drawable/bg_toolbar"
+
+
+
+        >
+
+        <ImageView
+            android:id="@+id/threeLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/dot"
+            android:padding="15dp"
+            android:layout_gravity="center"/>
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text=" EKTA YUWA CLUB "
+            android:layout_gravity="center"
+            android:textSize="20dp"
+            android:layout_marginLeft="20dp"
+            />
+
+        <ImageView
+            android:id="@+id/settingBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/settings"
+            android:padding="15dp"
+            android:layout_marginLeft="50dp"
+            />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/loginTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:visibility="invisible"
+        android:padding="10dp"
+        android:background="@drawable/rotate_anim"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="80dp"
+        android:layout_marginRight="30dp"
+        android:textColor="@color/black"
+        android:layout_above="@+id/fab"/>
+
+    <TextView
+        android:id="@+id/registrationTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Registration"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rotate_anim"
+        android:visibility="invisible"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="30dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/black"
+        android:layout_above="@+id/fab"
+        android:layout_marginBottom="25dp"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/plus"
+        android:backgroundTint="@color/green"
+
+
+        />
+
+    <LinearLayout
+        android:id="@+id/noticeBoard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/toolbar"
+        android:layout_centerHorizontal="true"
+        android:background="#80CAC4C4"
+        android:gravity="center"
+
+        >
+       <ImageView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:src="@drawable/informative"
+           android:layout_gravity="center"
+           android:padding="15dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" NOTICE BOARD"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_gravity="center"/>
+
+
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/noticeRecylerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/noticeBoard"
+        android:layout_margin="5dp"
+
+        >
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+
+
+
+</RelativeLayout>
